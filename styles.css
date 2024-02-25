@@ -1,0 +1,301 @@
+* {
+    font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*font-family: "Segoe UI", "Franklin Gothic Medium", "Arial", sans-serif;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f39809;
+    background-color: #000000;
+}
+
+
+body {
+    cursor: default;
+    font-size: small;
+
+}
+
+table {
+    margin: 0 auto;
+    width: 100%; /* Ensure tables take full width */
+}
+
+div {
+    margin: 0 auto;
+}
+
+#answerOverlay {
+    z-index: 1000; /* Ensure it is above other content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ecw-answerbox {
+    /* Consolidated width properties */
+    max-width: 90%; /* Max width to avoid overly wide boxes */
+    width: 80%; /* Default width, can adjust as needed */
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #f39809;
+    background-color: #000000;
+    border: 1px solid #f39809; /* Consolidated border properties */
+    display: block;
+    padding: 10px; /* Increased padding for visual spacing */
+    /* Removed margin-top: 20px; to use auto margins for vertical centering in the overlay */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .ecw-answerbox {
+        width: 90%; /* Adjust width for smaller screens */
+        margin-top: 10px; /* Adjust margin top */
+    }
+
+    .ecw-button {
+        width: 50%; /* Adjust button width */
+    }
+
+    .ecw-input {
+        width: 80%; /* Adjust input width */
+    }
+
+    .ecw-crosswordarea {
+        font-size: small; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .ecw-answerbox {
+        width: 80%; /* Further adjust width for very small screens */
+        margin-top: 5px; /* Further adjust margin top */
+    }
+
+    .ecw-button {
+        width: 70%; /* Further adjust button width */
+    }
+
+    .ecw-input {
+        width: 90%; /* Further adjust input width */
+    }
+}
+
+/* Other styles remain unchanged */
+.ecw-box {
+    border-style: solid;
+    border-width: 1pt;
+    cursor: pointer;
+    font-size: .12in;
+    font-weight: bold;
+    height: .18in;
+    overflow: hidden;
+    text-align: center;
+    width: .18in;
+}
+
+.ecw-boxcheated_sel {
+    background-color: #FFF1D7;
+    border-color: #C00000;
+    color: #2080D0;
+}
+
+.ecw-boxcheated_unsel {
+    background-color: #ffffff;
+    border-color: #606060;
+    color: #2080D0;
+}
+
+.ecw-boxerror_sel {
+    background-color: #FFF1D7;
+    border-color: #C00000;
+    color: #BF0000;
+}
+
+.ecw-boxerror_unsel {
+    background-color: #FFF0F0;
+    border-color: #606060;
+    color: #BF0000;
+}
+
+.ecw-boxnormal_sel {
+    background-color: #9d9a96;
+    border-color: #ffef06;
+    color: #ffffff;
+}
+
+.ecw-boxnormal_unsel {
+    background-color: #000000;
+    border-color: #fe9800;
+    color: #ffffff;
+}
+
+.ecw-button {
+    width: 64pt;
+}
+
+.ecw-cluebox {
+    border-bottom-width: 1px;
+    border-color: #c0c0c0;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-style: solid;
+    border-top-width: 1px;
+    margin-top: 1em;
+    padding-bottom: .5em;
+    padding-left: 0pt;
+    padding-right: 0pt;
+    padding-top: .5em;
+}
+
+.ecw-crosswordarea {
+    display: none;
+    background-color: #D0D8E0;
+    border-color: #808080;
+    border-style: solid;
+    border-width: 2px;
+    padding: .5em;
+    font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
+    font-size: small;
+}
+
+.ecw-copyright {
+    margin-bottom: 1em;
+    font-size: x-small;
+    font-family: "Segoe UI", "Franklin Gothic Medium", "Arial", sans-serif;
+}
+
+.ecw-input {
+    font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
+    font-size: 16px; /* Minimum recommended size to prevent zoom on mobile */}
+
+.ecw-wordlabel {
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ecw-wordinfo {
+    font-size: 8pt;
+    color: #ffffff;
+}
+
+.ecw-worderror {
+    color: #c00000;
+    font-weight: bold;
+    display: none;
+    margin-top: 1em;
+}
+
+#checkbutton {
+    background-color: #f39809;
+    border-radius: 3vh;
+    border: solid #000000;
+    border-width: 1px;
+}
+
+#checkMistakesButton, #switchCrosswordButton {
+    display: block;
+    margin: 1em auto; /* Center the button and add some space above */
+    background-color: #f39809;
+    border-radius: 3vh;
+    border: solid #000000;
+    border-width: 1px;
+}
+
+
+
+
+
+
+#initialOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2000; /* Ensure it's above everything else */
+    overflow-y: auto; /* Allows scrolling */
+}
+
+.typing-text {
+    padding-bottom: 60px; /* Adjust so there's enough space for the 'Tap to Skip' button */
+    color: white; /* Default text color for the body */
+    border-right: 2px solid amber;
+    white-space: pre-wrap; /* Allows for line breaks in your typing text */
+    font-size: 20px;
+    margin: auto; /* Keeps the text vertically centered */
+}
+
+.typing-text .section-title {
+    color: orange; /* Assuming orange is close to your desired amber. Adjust the color as needed. */
+}
+
+
+@media (max-width: 768px) {
+    .typing-text {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@keyframes blink {
+    0%, 100% { color: white; }
+    50% { color: orange; }
+}
+
+.tap-to-skip {
+    position: fixed; /* Keeps the message fixed at the bottom */
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal position to truly center */
+    font-weight: bold;
+    font-size: 16px; /* Adjust based on your preference */
+    animation: blink 2s linear infinite; /* Apply the blinking animation */
+    cursor: pointer;
+    z-index: 2100; /* Ensure it's above other content */
+}
+
+.ecw-boxnormal {
+    background-color: #000000; /* Black background */
+    border-color: #fe9800; /* Orange border */
+    color: #ffffff; /* White text color for letters */
+    border-style: solid;
+    border-width: 1pt;
+    cursor: pointer;
+    font-size: .12in;
+    font-weight: bold;
+    height: .18in;
+    overflow: hidden;
+    text-align: center;
+    width: .18in;
+}
+
+
