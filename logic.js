@@ -367,14 +367,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	const contentParts = [
 		{ content: '<img src="logo.png" alt="Game Logo" style="max-width:100%; height:100px; margin-bottom:25px;">', type: 'html' },
 		{ content: '<h1>Welcome to the <span class="section-title">Hurling Legends Crossword Collection!</span></h1>', type: 'html' },
-		{ content: 'Dive into the legacy of hurling heroes in this engaging crossword puzzle series. Each puzzle celebrates the illustrious careers and contributions of some of the most famous figures in hurling, spanning counties like Kilkenny, Limerick, and more. From legendary players to iconic moments in the sport, this collection spans generations of talent that have graced the pitch.', type: 'text' },
+		{ content: 'Dive into the legacy of hurling heroes in this engaging crossword puzzle series. Each puzzle celebrates the illustrious careers and contributions of some of the most famous figures in hurling, spanning counties and more. From legendary players to iconic moments in the sport, this collection spans generations of talent that have graced the pitch.', type: 'text' },
 		{ content: '<h3><span class="section-title">How It Works:</span></h3>', type: 'html' },
 		{ content: 'Navigate the Grid: Use your mouse or touch to select a crossword square. The selected clue will appear at the top, guiding you to fill in the correct answer based on the clue provided.', type: 'text' },
 		{ content: '<h3><span class="section-title">Enter Your Answers:</span></h3>', type: 'html' },
 		{ content: 'Type in the answer corresponding to the clue provided. If you\'re stuck, try moving on to other clues — sometimes, filling in surrounding answers can help!', type: 'text' },
 		{ content: '<h3><span class="section-title">Check Your Progress: </span></h3>', type: 'html' },
 		{ content: 'Feel free to use the "Check for mistakes" button to review your answers. But remember, each clue is a chance to recall and celebrate the rich history and achievements in hurling.', type: 'text' },
-		{ content: '<h3><span class="section-title">Submit with Confidence:</span></h3>', type: 'html' },
+		{ content: '<h3><span class="section-title">Submit your guess:</span></h3>', type: 'html' },
 		{ content: 'Once you\'ve filled in all the answers, press the "OK" button to submit your crossword. Don\'t worry if you don\'t get everything right the first time; this is an opportunity to learn about the legends and lore of hurling across different counties.', type: 'text' }
 	];
 	
