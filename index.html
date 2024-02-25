@@ -13,8 +13,8 @@
     <div id="waitmessage" class="ecw-answerbox">
         Loading...
     </div>
-
-    <table id="crosswordContainer" cellpadding="0" cellspacing="0" border="0">
+<div id="crosswordBackground" style="position: relative; overflow: hidden;">
+    <div id="blurredBackground" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>    <table id="crosswordContainer" cellpadding="0" cellspacing="0" border="0">
         <tr>
             <td class="ecw-crosswordarea">
                 <!-- Crossword grid will be dynamically inserted here -->
@@ -22,10 +22,7 @@
         </tr>
     </table>
 
-    <div id="welcomemessage" class="ecw-answerbox" style="display:none;">
-        <h3>Welcome</h3>
-        <p>Click on the crossword to start.</p>
-    </div>
+  
 
     <div id="answerOverlay" style="display:none;">
         <div id="answerbox" class="ecw-answerbox" style="display:none;">
@@ -50,7 +47,13 @@
             </table>
         </div>
     </div>
+</div>
+</div>
 
+<div id="welcomemessage" class="ecw-answerbox" style="display:none;">
+    <h3>Welcome</h3>
+    <p>Click on the crossword to start.</p>
+</div>
     <div id="congratulations" class="ecw-answerbox" style="display:none;">
         <h3>Congratulations!</h3>
         <p>You have completely solved the crossword.</p>

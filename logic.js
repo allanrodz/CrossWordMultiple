@@ -364,19 +364,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.body.appendChild(initialOverlay);
 
     // Expanded content with HTML tags for styling parts in amber
-    const contentParts = [
-		{ content: '<h1>Welcome to the <span class="section-title">Kilkenny Hurling Legends Crossword!</span></h1>', type: 'html' },
-        { content: '\n\nDive into the legacy of Kilkenny\'s hurling heroes in this engaging crossword puzzle. Each clue and answer celebrates the illustrious careers of some of the most famous hurlers from Kilkenny, a county with a rich history in the sport of hurling. From legendary goalkeepers to iconic field players, this puzzle spans generations of talent that have graced the pitch.\n\n', type: 'text' },
-        { content: '<h3><span class="section-title">How It Works:</span></h3>', type: 'html' },
-        { content: '\n\nNavigate the Grid: ', type: 'text' },
-        { content: 'Use your mouse or touch to select a crossword square. The selected clue will appear at the top, guiding you to fill in the player\'s last name.\n', type: 'text' },
-        { content: '<h3><span class="section-title">Enter Your Answers:</span></h3> ', type: 'html' },
-        { content: 'Type in the last name of the hurler corresponding to the clue provided. If you\'re stuck, try moving on to other clues — sometimes, filling in surrounding answers can help!\n', type: 'text' },
-        { content: '<h3><span class="section-title">Check Your Progress: </span></h3>', type: 'html' },
-        { content: 'Feel free to use the "Check for mistakes" button to review your answers. But remember, each clue is a chance to recall the glorious moments these players brought to the game.\n', type: 'text' },
-        { content: '<h3><span class="section-title">Submit with Confidence:</span></h3>', type: 'html' },
-        { content: 'Once you\'ve filled in all the names, press the "OK" button to submit your answers. Don\'t worry if you don\'t get everything right the first time; this is an opportunity to learn about the legends of Kilkenny hurling.', type: 'text' }
-    ];
+	const contentParts = [
+		{ content: '<img src="logo.png" alt="Game Logo" style="max-width:100%; height:100px; margin-bottom:25px;">', type: 'html' },
+		{ content: '<h1>Welcome to the <span class="section-title">Hurling Legends Crossword Collection!</span></h1>', type: 'html' },
+		{ content: 'Dive into the legacy of hurling heroes in this engaging crossword puzzle series. Each puzzle celebrates the illustrious careers and contributions of some of the most famous figures in hurling, spanning counties like Kilkenny, Limerick, and more. From legendary players to iconic moments in the sport, this collection spans generations of talent that have graced the pitch.', type: 'text' },
+		{ content: '<h3><span class="section-title">How It Works:</span></h3>', type: 'html' },
+		{ content: 'Navigate the Grid: Use your mouse or touch to select a crossword square. The selected clue will appear at the top, guiding you to fill in the correct answer based on the clue provided.', type: 'text' },
+		{ content: '<h3><span class="section-title">Enter Your Answers:</span></h3>', type: 'html' },
+		{ content: 'Type in the answer corresponding to the clue provided. If you\'re stuck, try moving on to other clues — sometimes, filling in surrounding answers can help!', type: 'text' },
+		{ content: '<h3><span class="section-title">Check Your Progress: </span></h3>', type: 'html' },
+		{ content: 'Feel free to use the "Check for mistakes" button to review your answers. But remember, each clue is a chance to recall and celebrate the rich history and achievements in hurling.', type: 'text' },
+		{ content: '<h3><span class="section-title">Submit with Confidence:</span></h3>', type: 'html' },
+		{ content: 'Once you\'ve filled in all the answers, press the "OK" button to submit your crossword. Don\'t worry if you don\'t get everything right the first time; this is an opportunity to learn about the legends and lore of hurling across different counties.', type: 'text' }
+	];
+	
 
     let partIndex = 0; // To keep track of which part of the content we're on
     const speed = 25; // Typing speed
@@ -486,6 +487,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 var crosswordPuzzles = [
+	{
+		CrosswordWidth : 19,
+		CrosswordHeight : 21,
+		Words : 15,
+		WordLength : new Array(7, 7, 6, 9, 8, 8, 6, 9, 8, 15, 4, 19, 7, 12, 7),
+		Word : new Array("SLIOTAR", "MUNSTER", "GALWAY", "TIPPERARY", "LIMERICK", "ALLSTARS", "BYRNES", "CIANLYNCH", "KILKENNY", "ALLIRELANDFINAL", "HURL", "MUNSTERCHAMPIONSHIP", "GILLANE", "PATRICKSWELL", "CAMOGIE"),
+		Clue : new Array("The ball used in hurling, a central element of the game, known for its distinct design and the skill required to play it effectively.", 
+		"A province renowned for its competitive hurling teams, including the powerhouse that is Limerick.", 
+		"Known for its passionate hurling community and competitive teams, contributing richly to the sport's history and excitement.", 
+		"A county with a storied tradition in hurling, consistently producing top-tier teams and legendary players over the years.", 
+		"The county celebrated for its successive triumphs in hurling, including multiple Hurler of the Year awards.", 
+		"An award recognizing the exceptional talent and contributions of hurling players across Ireland.", 
+		"Another key figure in Limerick's hurling dominance, recognized for his defensive prowess and contributions to the team's victories.", 
+		"Esteemed player from Limerick, known for his skillful play and pivotal role in the team's success, including winning the Hurler of the Year award.", 
+		"A county renowned for its strong hurling heritage and numerous championship wins, often seen as a powerhouse in the sport.", 
+		"The climax of the hurling season, where the best teams compete for the ultimate honor in Irish hurling, drawing fans from across the nation.", 
+		"The act of striking the sliotar with the hurley, a fundamental skill that defines the game and its unique appeal.", 
+		"A prestigious annual competition featuring teams from the Munster province, known for its intense matches and high level of play.", 
+		"A forward known for his sharpshooting skills, clinching the 2023 Hurler of the Year award for his outstanding performance with Limerick.", 
+		"The club represented by Aaron Gillane and other notable players, marking its significance in the hurling community.", 
+		"The female equivalent of hurling, showcasing the skill and dedication of women in the sport, celebrated across Ireland."),
+		AnswerHash : new Array(97629, 68949, 17179, 46183, 96782, 16168, 77916, 21425, 72452, 5352, 19408, 16689, 54333, 17179, 1426),
+		WordX : new Array(5, 0, 8, 10, 5, 1, 6, 6, 13, 6, 11, 16, 8, 10, 1),
+		WordY : new Array(4, 6, 7, 11, 13, 15, 18, 20, 0, 2, 2, 2, 7, 9, 14),
+		LastHorizontalWord : 7,
+		OnlyCheckOnce : false,
+		
+	},
 	{
 		CrosswordWidth : 18,
 		CrosswordHeight : 20,

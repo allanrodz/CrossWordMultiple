@@ -3,6 +3,16 @@
     text-align: center;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
 body,
 h1,
 h2,
@@ -23,10 +33,15 @@ h6 {
     background-color: #000000;
 }
 
+h1 {
+    margin-top: 0;
+    padding-top: 0;
+}
 
 body {
     cursor: default;
     font-size: small;
+    background-color: #393636;
 
 }
 
@@ -53,7 +68,6 @@ div {
 }
 
 .ecw-answerbox {
-    /* Consolidated width properties */
     max-width: 90%; /* Max width to avoid overly wide boxes */
     width: 80%; /* Default width, can adjust as needed */
     margin: auto;
@@ -63,9 +77,10 @@ div {
     background-color: #000000;
     border: 1px solid #f39809; /* Consolidated border properties */
     display: block;
-    padding: 10px; /* Increased padding for visual spacing */
-    /* Removed margin-top: 20px; to use auto margins for vertical centering in the overlay */
+    padding: 10px; /* Adjust padding if necessary to reduce height */
+    /* Specify a height or max-height here if needed */
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -299,3 +314,29 @@ div {
 }
 
 
+
+
+
+#crosswordBackground {
+    position: relative;
+    width: 100%; /* Adjust based on your layout */
+    height: 100%; /* Adjust based on your layout */
+}
+
+#blurredBackground {
+    background-image: url('https://scontent-dub4-1.xx.fbcdn.net/v/t39.30808-6/353615794_655217459980058_2143689268247408495_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=783fdb&_nc_ohc=cC_8mtMqsZQAX_riO4-&_nc_oc=AQmJmgD4nzFaWWFo9on6HDdziCk9xHDGyn-ikZJ2DHNePXFQLri3YBPcLx8-e-rhf7k&_nc_ht=scontent-dub4-1.xx&oh=00_AfBHPvCAxW7CdwLZK7l1RXKzPn_apQ4lIfClxX6wwXQphg&oe=65E0677A'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(1.5px); /* Adjust the blur level as needed */
+    z-index: -1; /* Keep it behind other content */
+}
+
+#crosswordContainer {
+    position: relative; /* Ensure the crossword sits above the blurred background */
+    z-index: 1; /* Higher z-index to ensure it's clickable and visible */
+}
+
+#waitmessage {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
